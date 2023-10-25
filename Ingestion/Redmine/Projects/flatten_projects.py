@@ -1,5 +1,4 @@
 from Functions import export_functions, import_functions
-from Functions import ingest_functions
 
 
 def flatten_project(projects):
@@ -31,15 +30,18 @@ def flatten_project(projects):
     return flattened_data
 
 
-raw_projects = import_functions.from_json("raw_projects.json")
+# raw_projects = import_functions.from_json("raw_projects.json")
 
-# raw_projects = import_functions.from_json_s3(
-#     "bucketfor008182637297", "redmine/projects/raw_data/raw_projects.json"
-# )
+raw_projects = import_functions.from_json_s3(
+    "bucketfor008182637297", "redmine/projects/raw_data/raw_projects.json"
+)
 
 flattened_projects = flatten_project(raw_projects)
-export_functions.to_json(flattened_projects, "flattened_projects.json")
 
-# export_functions.to_json_s3(
-#     flattened_projects, "bucketfor008182637297", "redmine/projects/raw_data/raw_projects.json"
-# )
+# export_functions.to_json(flattened_projects, "flattened_projects.json")
+
+export_functions.to_json_s3(
+    flattened_projects,
+    "bucketfor008182637297",
+    "redmine/projects/raw_data/raw_projects.json",
+)

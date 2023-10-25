@@ -135,24 +135,24 @@ def calculate_eff(flattened_projects, flattened_issues):
     return projects_efficiency
 
 
-flattened_projects = import_functions.from_json(
-    "../../Ingestion/Redmine/Projects/flattened_projects.json"
-)
-flattened_issues = import_functions.from_json(
-    "../../Ingestion/Redmine/Issues/flattened_issues.json"
-)
+# flattened_projects = import_functions.from_json(
+#     "../../Ingestion/Redmine/Projects/flattened_projects.json"
+# )
+# flattened_issues = import_functions.from_json(
+#     "../../Ingestion/Redmine/Issues/flattened_issues.json"
+# )
 
-# all_projects = import_functions.from_json_s3(
-#     "bucketfor008182637297", "redmine/projects/flattened_data/flattened_projects.json"
-# )
-# all_issues = import_functions.from_json_s3(
-#     "bucketfor008182637297", "redmine/issues/flattened_data/flattened_issues.json"
-# )
+flattened_projects = import_functions.from_json_s3(
+    "bucketfor008182637297", "redmine/projects/flattened_data/flattened_projects.json"
+)
+flattened_issues = import_functions.from_json_s3(
+    "bucketfor008182637297", "redmine/issues/flattened_data/flattened_issues.json"
+)
 
 eff = calculate_eff(flattened_projects, flattened_issues)
 
-# export_functions.to_json_s3(
-#     eff, "bucketfor008182637297", "redmine/metrics/efficiency_projects.json"
-# )
+# export_functions.to_json(eff, "efficiency_projects.json")
 
-export_functions.to_json(eff, "efficiency_projects.json")
+export_functions.to_json_s3(
+    eff, "bucketfor008182637297", "redmine/metrics/efficiency_projects.json"
+)

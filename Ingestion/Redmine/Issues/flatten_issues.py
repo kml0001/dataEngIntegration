@@ -213,15 +213,16 @@ def flatten_issues(issues):
     return flattened_data
 
 
-raw_issues = import_functions.from_json("raw_issues.json")
+# raw_issues = import_functions.from_json("raw_issues.json")
 
-# raw_issues = import_functions.from_json_s3(
-#     "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
-# )
+raw_issues = import_functions.from_json_s3(
+    "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
+)
 
 flattened_issues = flatten_issues(raw_issues)
-export_functions.to_json(flattened_issues, "flattened_issues.json")
 
-# export_functions.to_json_s3(
-#     flattened_issues, "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
-# )
+# export_functions.to_json(flattened_issues, "flattened_issues.json")
+
+export_functions.to_json_s3(
+    flattened_issues, "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
+)
