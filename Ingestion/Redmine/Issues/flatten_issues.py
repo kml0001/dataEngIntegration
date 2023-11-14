@@ -209,6 +209,17 @@ def flatten_issues(issues):
             flattened_issue["category_id"] = MISSING_VALUE
             flattened_issue["category_name"] = MISSING_TEXT
 
+        if flattened_issue['closed_on'] is not MISSING_DATE:
+            status = dict(flattened_issue["status"])
+            flattened_issue.pop("status")
+            flattened_issue["status_id"] = status.get("id")
+            flattened_issue["status_name"] = status.get("name")
+        else:
+            flattened_issue["status_id"] = MISSING_VALUE
+            flattened_issue["status_name"] = MISSING_TEXT
+
+
+
         flattened_data.append(flattened_issue)
     return flattened_data
 

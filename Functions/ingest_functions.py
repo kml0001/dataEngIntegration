@@ -5,12 +5,12 @@ ADMIN_KEY_REDMINE_NET = "8b6fda64b68909ba178c8f783703bed30396eaf5"
 
 
 def iterative_get_rest_api(dicc_key, get_request):
-    headers = {"X-Redmine-API-Key": ADMIN_KEY_REDMINE_NET}
+    headers = {"X-Redmine-API-Key": USER_KEY_REDMINE_COM}
     # Realizo una petición para saber el numero total de issues , aprovecho para cargar los primeros 100
     # creo la variable values y la tomo como base para almacenar el resto de issues
 
     i = 100
-    url = get_request + "?offset=0&limit=100"
+    url = get_request + "offset=0&limit=100"
     response = request.get(url, headers=headers)
     resp = response.json()
     values = resp.copy()
