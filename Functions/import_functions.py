@@ -7,11 +7,11 @@ def from_json_s3(bucket, partition):
     response = s3.get_object(Bucket=bucket, Key=partition)
 
     # via 1
-    json_file = json.loads(response["Body"])
+    # json_file = json.loads(response["Body"])
 
     # via 2
-    # json_file = response["Body"].read().decode("utf-8")
-    # json_file = json.loads(json_file)
+    json_file = response["Body"].read().decode("utf-8")
+    json_file = json.loads(json_file)
 
     return json_file
 
