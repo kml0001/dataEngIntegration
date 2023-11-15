@@ -1,29 +1,31 @@
+import datetime
+
 from Functions import export_functions, import_functions
 
 
 def flatten_issues(issues):
     # Flatten the JSON data
     # MISSING VALUES
-    MISSING_DATE = "1999-1-1"
+    MISSING_DATE = None
     MISSING_TEXT = ""
     MISSING_VALUE = "-1"
 
-    if "issues" in issues is None:
-        raise ValueError(
-            "Error: The JSON file is corrupted or invalid. Please check the file format and try again."
-        )
-
-    # issues = dict(values.items()).get("issues")
-    if issues is None:
-        raise ValueError(
-            "Error: The JSON file is corrupted or invalid. Please check the file format and try again."
-        )
+    # if "issues" in issues is None:
+    #     raise ValueError(
+    #         "Error: The JSON file is corrupted or invalid. Please check the file format and try again."
+    #     )
+    #
+    # issues = dict(issues.items()).get("issues")
+    # if issues is None:
+    #     raise ValueError(
+    #         "Error: The JSON file is corrupted or invalid. Please check the file format and try again."
+    #     )
 
     flattened_data = []
+
     for issue in issues:
         # Copia el issue original para no modificarlo
         flattened_issue = issue.copy()
-
         # flattened_issue['id']
         if not ("id" in flattened_issue and flattened_issue["id"] is not None):
             flattened_issue["id"] = MISSING_VALUE
@@ -209,31 +211,31 @@ def flatten_issues(issues):
             flattened_issue["category_id"] = MISSING_VALUE
             flattened_issue["category_name"] = MISSING_TEXT
 
-        if flattened_issue['closed_on'] is not MISSING_DATE:
-            status = dict(flattened_issue["status"])
-            flattened_issue.pop("status")
-            flattened_issue["status_id"] = status.get("id")
-            flattened_issue["status_name"] = status.get("name")
+        # Nuevo campo de fecha para las metricas
+        if flattened_issue["closed_on"] is None and (
+            flattened_issue["status_name"] == "CLOSED"
+            or flattened_issue["status_name"] == "DONE"
+        ):
+            flattened_issue["closed_date"] = str(datetime.datetime.now())
         else:
-            flattened_issue["status_id"] = MISSING_VALUE
-            flattened_issue["status_name"] = MISSING_TEXT
-
-
+            flattened_issue["closed_date"] = flattened_issue["closed_on"]
 
         flattened_data.append(flattened_issue)
+
     return flattened_data
 
 
-# raw_issues = import_functions.from_json("raw_issues.json")
+raw_issues = import_functions.from_json("raw_issues.json")
 
-raw_issues = import_functions.from_json_s3(
-    "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
-)
+# raw_issues = import_functions.from_json_s3(
+#     "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
+# )
 
 flattened_issues = flatten_issues(raw_issues)
 
-# export_functions.to_json(flattened_issues, "flattened_issues.json")
+export_functions.to_json(flattened_issues, "flattened_issues.json")
+export_functions.to_csv(flattened_issues, "flatten_issues.csv")
 
-export_functions.to_json_s3(
-    flattened_issues, "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
-)
+# export_functions.to_json_s3(
+#     flattened_issues, "bucketfor008182637297", "redmine/issues/raw_data/raw_issues.json"
+# )
