@@ -70,16 +70,17 @@ def flatten_users(users):
     return flattened_data
 
 
-# raw_users = import_functions.from_json("raw_users.json")
+raw_users = import_functions.from_json("raw_users.json")
 
-raw_users = import_functions.from_json_s3(
-    "bucketfor008182637297", "redmine/users/raw_data/raw_users.json"
-)
+# raw_users = import_functions.from_json_s3(
+#     "bucketfor008182637297", "redmine/users/raw_data/raw_users.json"
+# )
 
 flattened_users = flatten_users(raw_users)
 
-# export_functions.to_json(flattened_users, "flattened_users.json")
+export_functions.to_json(flattened_users, "flattened_users.json")
+export_functions.to_csv(flattened_users, "flatten_users.csv")
 
-export_functions.to_json_s3(
-    flattened_users, "bucketfor008182637297", "redmine/users/raw_data/raw_users.json"
-)
+# export_functions.to_json_s3(
+#     flattened_users, "bucketfor008182637297", "redmine/users/raw_data/raw_users.json"
+# )
