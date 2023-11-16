@@ -1,0 +1,202 @@
+[
+    {
+        "id": 392,
+        "project": {
+            "id": 11,
+            "name": "Data_Project"
+        },
+        "tracker": {
+            "id": 2,
+            "name": "Feature"
+        },
+        "status": {
+            "id": 5,
+            "name": "Closed"
+        },
+        "priority": {
+            "id": 2,
+            "name": "Normal"
+        },
+        "author": {
+            "id": 12,
+            "name": "Alejandro Rosete"
+        },
+        "assigned_to": {
+            "id": 14,
+            "name": "Leonardo Perez"
+        },
+        "parent": {
+            "id": 377
+        },
+        "subject": "2.4 Lectura superficial de otras partes (Cap 5,6, 11-)",
+        "description": "",
+        "start_date": "2023-09-14",
+        "due_date": null,
+        "done_ratio": 0,
+        "is_private": false,
+        "estimated_hours": 5.0,
+        "created_on": "2023-09-14T16:04:01Z",
+        "updated_on": "2023-09-18T15:51:10Z",
+        "closed_on": "2023-09-18T15:51:10Z"
+    },
+    {
+        "id": 382,
+        "project": {
+            "id": 11,
+            "name": "Data_Project"
+        },
+        "tracker": {
+            "id": 2,
+            "name": "Feature"
+        },
+        "status": {
+            "id": 5,
+            "name": "Closed"
+        },
+        "priority": {
+            "id": 2,
+            "name": "Normal"
+        },
+        "author": {
+            "id": 12,
+            "name": "Alejandro Rosete"
+        },
+        "assigned_to": {
+            "id": 13,
+            "name": "Camilo Chamorro Calas"
+        },
+        "parent": {
+            "id": 377
+        },
+        "subject": "2.2 Estudio libro AWS Part 2: Building virtual infrastructure consisting of computers and networking (Cap 3, 4: 80p)",
+        "description": "",
+        "start_date": "2023-09-14",
+        "due_date": null,
+        "done_ratio": 70,
+        "is_private": false,
+        "estimated_hours": 7.0,
+        "created_on": "2023-09-14T15:36:17Z",
+        "updated_on": "2023-09-27T14:17:00Z",
+        "closed_on": "2023-09-27T14:17:00Z"
+    },
+    {
+        "id": 378,
+        "project": {
+            "id": 11,
+            "name": "Data_Project"
+        },
+        "tracker": {
+            "id": 2,
+            "name": "Feature"
+        },
+        "status": {
+            "id": 5,
+            "name": "Closed"
+        },
+        "priority": {
+            "id": 2,
+            "name": "Normal"
+        },
+        "author": {
+            "id": 12,
+            "name": "Alejandro Rosete"
+        },
+        "assigned_to": {
+            "id": 13,
+            "name": "Camilo Chamorro Calas"
+        },
+        "parent": {
+            "id": 377
+        },
+        "subject": "2.1 Estudio libro AWS Part 1: Getting started (Cap 1, 2: 50p)",
+        "description": "",
+        "start_date": "2023-09-18",
+        "due_date": null,
+        "done_ratio": 0,
+        "is_private": false,
+        "estimated_hours": 4.0,
+        "created_on": "2023-09-14T15:30:03Z",
+        "updated_on": "2023-09-27T14:16:45Z",
+        "closed_on": "2023-09-27T14:16:45Z"
+    },
+    {
+        "id": 372,
+        "project": {
+            "id": 11,
+            "name": "Data_Project"
+        },
+        "tracker": {
+            "id": 3,
+            "name": "Support"
+        },
+        "status": {
+            "id": 5,
+            "name": "Closed"
+        },
+        "priority": {
+            "id": 2,
+            "name": "Normal"
+        },
+        "author": {
+            "id": 12,
+            "name": "Alejandro Rosete"
+        },
+        "assigned_to": {
+            "id": 13,
+            "name": "Camilo Chamorro Calas"
+        },
+        "parent": {
+            "id": 365
+        },
+        "subject": "1.3. Lectura parte 3 final (Cap 10-11, Apendices A, B)",
+        "description": "",
+        "start_date": "2023-09-18",
+        "due_date": null,
+        "done_ratio": 70,
+        "is_private": false,
+        "estimated_hours": 5.0,
+        "created_on": "2023-09-14T13:53:04Z",
+        "updated_on": "2023-09-27T14:16:33Z",
+        "closed_on": "2023-09-27T14:16:33Z"
+    },
+    {
+        "id": 370,
+        "project": {
+            "id": 11,
+            "name": "Data_Project"
+        },
+        "tracker": {
+            "id": 2,
+            "name": "Feature"
+        },
+        "status": {
+            "id": 5,
+            "name": "Closed"
+        },
+        "priority": {
+            "id": 2,
+            "name": "Normal"
+        },
+        "author": {
+            "id": 12,
+            "name": "Alejandro Rosete"
+        },
+        "assigned_to": {
+            "id": 14,
+            "name": "Leonardo Perez"
+        },
+        "parent": {
+            "id": 365
+        },
+        "subject": "1.2. Lectura parte 2 libro (Cap 5-9)",
+        "description": "",
+        "start_date": "2023-09-14",
+        "due_date": null,
+        "done_ratio": 100,
+        "is_private": false,
+        "estimated_hours": 6.0,
+        "created_on": "2023-09-14T13:47:43Z",
+        "updated_on": "2023-09-26T16:23:02Z",
+        "closed_on": "2023-09-26T16:22:57Z"
+    }
+]
