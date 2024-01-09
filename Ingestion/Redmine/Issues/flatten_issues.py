@@ -6,7 +6,7 @@ from Functions import export_functions, import_functions
 def flatten_issues(issues):
     # Flatten the JSON data
     # MISSING VALUES
-    MISSING_DATE = None
+    MISSING_DATE = ""
     MISSING_TEXT = ""
     MISSING_VALUE = "-1"
 

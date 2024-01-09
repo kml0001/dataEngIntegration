@@ -1,0 +1,13 @@
+passwd_changed_on,admin,created_on,last_login_on,firstname,updated_on,mail,twofa_scheme,id,lastname,login
+2023-08-04T19:44:32Z,True,2023-08-04T19:42:23Z,2023-09-29T18:10:39Z,Redmine,2023-08-04T19:44:32Z,admin@example.net,-1,1,Admin,admin
+2023-09-12T11:49:12Z,False,2023-09-12T11:49:12Z,2023-10-17T00:49:26Z,Camilo,2023-09-12T12:06:52Z,kmychamo@gmail.com,-1,13,Chamorro Calas,camilo
+2023-08-30T19:43:58Z,True,2023-08-30T19:43:58Z,2023-09-13T15:23:24Z,Emilio,2023-08-30T19:43:58Z,emilio@avangenio.com,-1,11,González,emilio
+2023-08-08T19:56:35Z,True,2023-08-08T19:56:35Z,2023-08-15T15:26:57Z,Jorge,2023-08-08T19:56:54Z,jgarciama2013@gmail.com,-1,9,Garcia,jgarciama
+2023-08-05T18:34:20Z,True,2023-08-05T18:34:20Z,2023-08-27T22:20:51Z,Jose,2023-08-05T18:34:20Z,jose.antonio@avangenio.com,-1,6,Osorio,jose.antonio
+2023-08-08T19:35:32Z,True,2023-08-08T19:35:32Z,2023-08-08T19:56:18Z,Leanet ,2023-08-08T19:35:32Z,leanet@avangenio.com,-1,8,AVANGENIO,leanet
+2023-09-12T11:50:09Z,False,2023-09-12T11:50:09Z,2023-09-29T16:03:40Z,Leonardo,2023-09-12T11:50:09Z,leonardocujae@gmail.com,-1,14,Perez,leonardo
+2023-08-08T19:20:29Z,True,2023-08-08T19:20:29Z,MISSING_DATE,Lilia Rosa,2023-08-08T19:20:29Z,liliarosa.garcia@avangenio.com,-1,7,Perellada ,lili
+2023-09-13T11:54:29Z,False,2023-09-07T12:31:42Z,2023-09-14T12:54:58Z,Alejandro,2023-09-13T11:54:29Z,alejandro.rosete@avangenio.com,-1,12,Rosete,rosete
+2023-08-22T21:33:57Z,False,2023-08-15T17:50:47Z,2023-08-31T01:31:36Z,Test,2023-08-22T21:33:57Z,test@test.com,-1,10,Tester,test
+2023-09-12T11:51:29Z,False,2023-09-12T11:51:29Z,2023-09-25T13:57:06Z,Victor Manuel,2023-09-12T11:51:29Z,victormsire@gmail.com,-1,15,Sire Martinez,victormanuel
+2023-08-04T19:46:11Z,True,2023-08-04T19:46:11Z,2023-09-29T18:23:08Z,Yasmiany,2023-08-04T19:46:11Z,yasmiany@avangenio.com,-1,5,PM,yasmianym
